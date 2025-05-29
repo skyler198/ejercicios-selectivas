@@ -4,24 +4,25 @@ using namespace std;
 int main()
 {
     double N1, N2, N3, P;
+    cout << "bienvenido a mi programa" <<endl;
 
-    cout << Ingrese la primera nota: <<endl;
+    cout <<"Ingrese la primera nota:" <<endl;
     cin >> N1;
 
-    cout << Ingrese la segunda nota: <<endl;
+    cout <<"Ingrese la segunda nota:"<<endl;
     cin >> N2;
 
-    cout << Ingrese la tercera nota: <<endl;
+    cout <<"Ingrese la tercera nota:"<<endl;
     cin >> N3;
 
     P = (N1 + N2 + N3) / 3;
 
-    cout << Tu promedio es:  << P << endl;
+    cout <<"Tu promedio es: "<< P << endl;
 
     if (P >= 70) {
-        cout << Alumno APROBADO. << endl;
+        cout <<"Alumno APROBADO." << endl;
     } else {
-        cout << Alumno REPROBADO. << endl;
+        cout <<"Alumno REPROBADO."<< endl;
     }
 
     return 0;
