@@ -3,24 +3,34 @@ using namespace std;
 
 int main() {
     int cantidad;
-    double PU, C, MC, MF;
+    double precioUnitario, montoCompra, montoFinal;
+    char R;
+    
+    cout << "BIENVENIDO A MI PROGRAMA" << endl;
+    
+    do{
+    cout <<"Ingrese el precio de una camisa:" <<endl;
+    cin >> precioUnitario;
 
-    cout << Ingrese el precio de una camisa: <<endl;
-    cin >> PU;
+    cout <<"Ingrese la cantidad de camisas que desea comprar:"<<endl;
+    cin >> cantidad;
 
-    cout << Ingrese la cantidad de camisas que desea comprar: <<endl;
-    cin >> C;
+    montoCompra = precioUnitario * cantidad;
 
-    MC = PU * C;
-
-    if (C >= 3) {
-        MF = MC * 0.80;
+    if (cantidad >= 3) {
+        montoFinal = montoCompra * 0.80;
     }
 	else {
-        MF = MC * 0.90;
+        montoFinal = montoCompra * 0.90;
     }
 
-    cout << Total a pagar: S/.  << MF << endl;
+    cout <<"Total a pagar: S/. "<< montoFinal << endl;
+    cout << "Desea seguir ingresando datos para calcular el precio que debera pagar por las camisas? (s/n): " << endl;
+    cin >> R;
+   
+	} while (R ==  's' || R == 'S');
+    
+    cout << "GRACIAS POR USAR MI PROGRAMA <3" << endl;
 
     return 0;
 }
