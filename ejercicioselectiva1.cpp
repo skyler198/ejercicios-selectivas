@@ -3,43 +3,57 @@ using namespace std;
 
 int main()
 {
-    double N1, N2, N3, P;
+    double Nota1, Nota2, Nota3, Promedio, opcion;
     cout << "BIENVENIDO A MI PROGRAMA" <<endl;
-	
-	do {
-    	cout << "Ingrese la primera nota:" << endl;
-        cin >> N1;
-        if (N1 < 0) {
-            cout << "Nota invalida. Ingrese una nota mayor o igual a 0" << endl;
-        }
-    } while (N1 < 0);
-    
-	do{
-		cout << "Ingrese la segunda nota:" << endl;
-        cin >> N2;
-        if (N2 < 0) {
-            cout << "Nota invalida. Ingrese una nota mayor o igual a 0" << endl;
-        }
-    } while (N2 < 0);
+    do {
+    	cout << endl;
+		cout << "----- MENU-----" << endl;
+		cout << "1. Calcular el promedio de notas" << endl;
+		cout << "2. Salir" << endl;
+		cout << endl;
+		cout << "seleccione una opcion:" << endl;
+		cin >> opcion;
 		
-	do {
-		cout << "Ingrese la tercera nota: " << endl;
-        cin >> N3;
-        if (N3 < 0) {
-            cout << "Nota invalida. Ingrese una nota mayor o igual a 0" << endl;
-        }
-    } while (N3 < 0);
+		if (opcion == 1){
+			do {
+    			cout << "Ingrese la primera nota:" << endl;
+        		cin >> Nota1;
+        		if (Nota1 < 0 || Nota1 > 100 ) {
+            		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
+        		}
+    		} while (Nota1 < 0 || Nota1 > 100);
+    
+			do{
+				cout << "Ingrese la segunda nota:" << endl;
+        		cin >> Nota2;
+        		if (Nota2 < 0 || Nota2 > 100 ) {
+            		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
+       			}
+    		} while (Nota2 < 0 || Nota2 > 100 );
+		
+			do {
+				cout << "Ingrese la tercera nota: " << endl;
+        		cin >> Nota3;
+       			 if (Nota3 < 0 || Nota3 > 100 ) {
+            		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
+       			 }
+    		} while (Nota3 < 0 || Nota3 > 100 );
 	
-	P = (N1 + N2 + N3) / 3;
+			Promedio = (Nota1 + Nota2 + Nota3) / 3;
 	
-	cout <<"Tu promedio es: "<< P << endl;
-	if (P >= 70) {
-		cout <<"Alumno APROBADO." << endl;
-	} else {
-		cout <<"Alumno REPROBADO."<< endl;
-	}
+			cout <<"Tu promedio es: "<< Promedio << endl;
+			if (Promedio >= 70) {
+				cout <<"Alumno APROBADO." << endl;
+			} else {
+				cout <<"Alumno REPROBADO."<< endl;
+			}
+			
+		} else if ( opcion == 2){
+			cout << "GRACIAS POR USAR MI PROGRAMA <3" << endl;
+		} else {
+			cout << "Opcion invalida, intente de nuevo." << endl;
+		}
+	} while (opcion !=2);
 	
-	cout << "GRACIAS POR USAR MI PROGRAMA <3" << endl;
-
     return 0;
 }
