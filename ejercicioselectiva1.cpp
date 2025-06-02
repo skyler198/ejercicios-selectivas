@@ -26,7 +26,7 @@ int main()
         		if (!esNotaValida(Nota1))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
         		}
-    		} while (Nota1 < 0 || Nota1 > 100);
+    		} while (!esNotaValida(Nota1));
     
 			do{
 				cout << "Ingrese la segunda nota:" << endl;
@@ -34,7 +34,7 @@ int main()
         		if (!esNotaValida(Nota2))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
        			}
-    		} while (Nota2 < 0 || Nota2 > 100 );
+    		} while (!esNotaValida(Nota2));
 		
 			do {
 				cout << "Ingrese la tercera nota: " << endl;
@@ -42,7 +42,7 @@ int main()
        			 if (!esNotaValida(Nota3))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
        			 }
-    		} while (Nota3 < 0 || Nota3 > 100 );
+    		} while (!esNotaValida(Nota3));
 	
 			Promedio = (Nota1 + Nota2 + Nota3) / 3;
 	
