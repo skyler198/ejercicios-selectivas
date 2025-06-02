@@ -1,9 +1,14 @@
 #include <iostream>
 using namespace std;
 
+bool esNotaValida(double nota) {
+    return nota >= 0 && nota <= 100;
+}
+
 int main()
 {
-    double Nota1, Nota2, Nota3, Promedio, opcion;
+    double Nota1, Nota2, Nota3, Promedio;
+	int opcion;
     cout << "BIENVENIDO A MI PROGRAMA" <<endl;
     do {
     	cout << endl;
@@ -18,7 +23,7 @@ int main()
 			do {
     			cout << "Ingrese la primera nota:" << endl;
         		cin >> Nota1;
-        		if (Nota1 < 0 || Nota1 > 100 ) {
+        		if (!esNotaValida(Nota1))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
         		}
     		} while (Nota1 < 0 || Nota1 > 100);
@@ -26,7 +31,7 @@ int main()
 			do{
 				cout << "Ingrese la segunda nota:" << endl;
         		cin >> Nota2;
-        		if (Nota2 < 0 || Nota2 > 100 ) {
+        		if (!esNotaValida(Nota2))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
        			}
     		} while (Nota2 < 0 || Nota2 > 100 );
@@ -34,7 +39,7 @@ int main()
 			do {
 				cout << "Ingrese la tercera nota: " << endl;
         		cin >> Nota3;
-       			 if (Nota3 < 0 || Nota3 > 100 ) {
+       			 if (!esNotaValida(Nota3))  {
             		cout << "Nota invalida. Ingrese una nota entre 0 y 100" << endl;
        			 }
     		} while (Nota3 < 0 || Nota3 > 100 );
