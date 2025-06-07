@@ -1,12 +1,17 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
+	string nombre;
     int cantidad;
     double precioUnitario, montoCompra, montoFinal;
     char R;
     
     cout << "BIENVENIDO A MI PROGRAMA" << endl;
+    
+    cout << "Ingresa el nombre del comprador: "<<endl;
+    getline(cin, nombre);
     
     do{
     cout <<"Ingrese el precio de una camisa:" <<endl;
